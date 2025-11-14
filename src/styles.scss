@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; // Hace que padding y border se incluyan en el ancho/alto
+}
+
+/* FUENTE GLOBAL */
+body {
+  font-family: 'Anonymous Pro', monospace;
+  overflow-x: hidden; // Oculta scroll horizontal
+}
+
+/* VARIABLES CSS DEL DISEÑO DE FIGMA */
+:root {
+  /* FONDOS */
+  --fondo-principal: conic-gradient(from -83.19deg at 31.81% 50%, 
+    #000D7F 0deg, 
+    #004D58 0.04deg, 
+    #005255 38.66deg, 
+    #005454 75.05deg, 
+    #005653 90deg, 
+    #003964 103.42deg, 
+    #002E6A 108.65deg, 
+    #00B31B 169.62deg, 
+    #00AB20 175.67deg, 
+    #00992B 188.06deg, 
+    #008934 199.04deg, 
+    #003865 233.62deg, 
+    #00654A 360deg
+  );
+  
+  /* COLORES SÓLIDOS */
+  --color-negro: #000000;
+  --color-blanco: #FFFFFF;
+  --color-verde: #00B31B;
+  --color-azul: #000D7F;
+  --color-tarjeta-verde: #00A219;
+  --color-boton-ver: #16A085;
+  --color-amarillo: #F8FFA7;
+  --color-barra-lateral: #004D58;
+  --color-gris: #7F8C8D;
+  --color-gris-oscuro: #2C3E50;
+  
+  /* GRADIENTES */
+  --gradiente-boton: linear-gradient(90deg, #00B31B 0%, #000D7F 100%);
+  --gradiente-boton-verde: linear-gradient(90deg, #00B31B 0%, #007C3C 33.17%, #000D7F 100%);
+  
+  /* TIPOGRAFÍA */
+  --fuente-principal: 'Anonymous Pro', monospace;
+  --font-titulo-xl: 96px;
+  --font-titulo-grande: 64px;
+  --font-titulo-medio: 48px;
+  --font-titulo-pequeño: 40px;
+  --font-normal: 24px;
+  --font-pequeño: 18px;
+  --font-muy-pequeño: 16px;
+  
+  /* ESPACIADOS */
+  --espacio-xs: 8px;
+  --espacio-sm: 15px;
+  --espacio-md: 20px;
+  --espacio-lg: 50px;
+  --espacio-xl: 100px;
+  
+  /* BORDER RADIUS */
+  --radius-pequeño: 6px;
+  --radius-medio: 10px;
+  --radius-grande: 50px;
+  --radius-redondeado: 100px;
+}

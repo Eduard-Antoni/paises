@@ -1,0 +1,602 @@
+<div class="list-container">
+  <!-- Encabezado negro con botón de regreso y título de región -->
+  <header class="header">
+    <button class="btn-back" (click)="goBack()">
+      ← Volver al Mundo
+    </button>
+    
+    <div class="header-content">
+      <h1 class="title">🌎 REGIÓN DE {{ getRegionDisplayName() }}</h1>
+    </div>
+  </header>
+
+  <!-- Layout principal con 3 columnas: sidebar izquierda, centro, sidebar derecha -->
+  <div class="main-content">
+    
+    <!-- Sidebar izquierda: Datos curiosos de la región seleccionada -->
+    <aside class="sidebar-left">
+      <div class="datos-curiosos">
+         <!-- ========== AMÉRICAS ========== -->
+    @if (regionName  === 'Americas') {
+        <h3>🌎 DATOS CURIOSOS - REGIÓN DE LAS AMÉRICAS</h3>
+        
+        <h4>📊 Estadísticas Generales:</h4>
+        <ul>
+          <li>• 35 países en total</li>
+          <li>• 7,000+ idiomas indígenas (Náhuatl, Quechua, Guaraní)</li>
+          <li>• Población total: Más de 1,000 millones</li>
+          <li>• País más grande: Canadá (9.98 millones km²)</li>
+          <li>• País más pequeño: San Cristóbal y Nieves (261 km²)</li>
+        </ul>
+
+        <h4>🏔️ Récords Geográficos:</h4>
+        <ul>
+          <li>• Montaña más alta: Aconcagua, Argentina (6,961m)</li>
+          <li>• Río más largo: Amazonas (6,400 km)</li>
+          <li>• Cascada más alta: Salto Ángel, Venezuela (979m)</li>
+          <li>• Desierto más seco: Atacama, Chile</li>
+          <li>• Selva más grande: Amazonía (9 países)</li>
+        </ul>
+
+        <h4>🌟 Curiosidades:</h4>
+       <ul>
+  <li>🇦🇬 <strong>Antigua y Barbuda:</strong> Tiene 365 playas, una para cada día del año.</li>
+  <li>🇦🇷 <strong>Argentina:</strong> Inventó el dulce de leche. El tango es Patrimonio de la Humanidad.</li>
+  <li>🇧🇸 <strong>Bahamas:</strong> Tiene cerdos nadadores en la isla Big Major Cay.</li>
+  <li>🇧🇧 <strong>Barbados:</strong> Inventó el ron. La cantante Rihanna nació aquí.</li>
+  <li>🇧🇿 <strong>Belice:</strong> Es el único país de Centroamérica con inglés como idioma oficial.</li>
+  <li>🇧🇴 <strong>Bolivia:</strong> Tiene el Salar de Uyuni, el desierto de sal más grande del mundo.</li>
+  <li>🇧🇷 <strong>Brasil:</strong> Contiene el 60% de la Amazonía. Es 5 veces campeón mundial de fútbol.</li>
+  <li>🇨🇦 <strong>Canadá:</strong> Tiene más lagos que el resto del mundo combinado.</li>
+  <li>🇨🇱 <strong>Chile:</strong> Tiene el desierto más árido del mundo: el Atacama.</li>
+  <li>🇨🇴 <strong>Colombia:</strong> Produce el 70% de las esmeraldas del mundo.</li>
+  <li>🇨🇷 <strong>Costa Rica:</strong> No tiene ejército desde 1948. Invierte ese presupuesto en educación.</li>
+  <li>🇨🇺 <strong>Cuba:</strong> Sus autos clásicos de los años 50 son patrimonio cultural móvil.</li>
+  <li>🇩🇲 <strong>Dominica:</strong> Tiene 365 ríos. Es conocida como "La Isla Naturaleza".</li>
+  <li>🇪🇨 <strong>Ecuador:</strong> Las Islas Galápagos inspiraron la teoría de la evolución de Darwin.</li>
+  <li>🇸🇻 <strong>El Salvador:</strong> Es el país más pequeño de Centroamérica con 21,041 km².</li>
+  <li>🇺🇸 <strong>Estados Unidos:</strong> No tiene idioma oficial a nivel federal. El inglés es idioma de facto.</li>
+  <li>🇬🇩 <strong>Granada:</strong> Produce el 20% de la nuez moscada mundial. Es llamada "Isla de las Especias".</li>
+  <li>🇬🇹 <strong>Guatemala:</strong> Tiene 37 volcanes. Tikal es una de las ciudades mayas más importantes.</li>
+  <li>🇬🇾 <strong>Guyana:</strong> Tiene las cataratas Kaieteur, 5 veces más altas que las del Niágara.</li>
+  <li>🇭🇹 <strong>Haití:</strong> Fue la primera república negra independiente del mundo en 1804.</li>
+  <li>🇭🇳 <strong>Honduras:</strong> Copán es uno de los sitios arqueológicos mayas más importantes.</li>
+  <li>🇯🇲 <strong>Jamaica:</strong> Es la cuna del reggae. Usain Bolt, el hombre más rápido del mundo, es jamaiquino.</li>
+  <li>🇲🇽 <strong>México:</strong> Tiene 35 sitios Patrimonio de la Humanidad UNESCO. Inventó el chocolate.</li>
+  <li>🇳🇮 <strong>Nicaragua:</strong> Tiene el lago más grande de Centroamérica: el lago de Nicaragua.</li>
+  <li>🇵🇦 <strong>Panamá:</strong> El Canal de Panamá conecta los océanos Atlántico y Pacífico.</li>
+  <li>🇵🇾 <strong>Paraguay:</strong> Es oficialmente bilingüe: español y guaraní. El 90% habla guaraní.</li>
+  <li>🇵🇪 <strong>Perú:</strong> Tiene Machu Picchu, una de las 7 maravillas del mundo. Cultiva 3,000 variedades de papa.</li>
+  <li>🇩🇴 <strong>República Dominicana:</strong> Fue el primer lugar colonizado por europeos en América en 1492.</li>
+  <li>🇰🇳 <strong>San Cristóbal y Nieves:</strong> Es el país más pequeño de América con solo 261 km².</li>
+  <li>🇻🇨 <strong>San Vicente y las Granadinas:</strong> Aquí se filmaron escenas de "Piratas del Caribe".</li>
+  <li>🇱🇨 <strong>Santa Lucía:</strong> Tiene los Pitons, los únicos picos volcánicos declarados Patrimonio Mundial.</li>
+  <li>🇸🇷 <strong>Surinam:</strong> El idioma oficial es holandés. Es el país más pequeño de Sudamérica.</li>
+  <li>🇹🇹 <strong>Trinidad y Tobago:</strong> Inventó el steelpan, el único instrumento acústico creado en el siglo XX.</li>
+  <li>🇺🇾 <strong>Uruguay:</strong> Fue el primer país del mundo en legalizar la marihuana en 2013.</li>
+  <li>🇻🇪 <strong>Venezuela:</strong> Tiene el Salto Ángel, la cascada más alta del mundo con 979 metros.</li>
+</ul>
+    } <!-- ========== Fin de América ========== -->
+
+    <!-- ========== ÁFRICA ========== -->
+@if (regionName === 'Africa') {
+  <h3>🌍 DATOS CURIOSOS - REGIÓN DE ÁFRICA</h3>
+  
+  <h4>📊 Estadísticas Generales:</h4>
+  <ul>
+    <li>• 54 países soberanos</li>
+    <li>• 5 territorios no soberanos</li>
+    <li>• 6 países insulares</li>
+    <li>• Más de 2,000 idiomas hablados</li>
+    <li>• Población total: Más de 1,400 millones</li>
+    <li>• País más grande: Argelia (2.38 millones km²)</li>
+    <li>• País más pequeño: Seychelles (459 km²)</li>
+  </ul>
+
+  <h4>🏝️ Los 6 Países Insulares:</h4>
+  <ul>
+    <li><strong>Océano Índico:</strong> Madagascar, Mauricio, Seychelles, Comoras</li>
+    <li><strong>Océano Atlántico:</strong> Cabo Verde, Santo Tomé y Príncipe</li>
+  </ul>
+
+  <h4>🏴 Los 5 Territorios No Soberanos:</h4>
+  <ul>
+    <li><strong>Territorios Franceses (2):</strong> Mayotte, Reunión</li>
+    <li><strong>Territorios Británicos (2):</strong> Santa Elena (Ascensión y Tristán de Acuña), Territorio Británico del Océano Índico</li>
+    <li><strong>Disputados (1):</strong> Sahara Occidental</li>
+  </ul>
+
+  <h4>🏔️ Récords Geográficos:</h4>
+  <ul>
+    <li>• Montaña más alta: Kilimanjaro, Tanzania (5,895m)</li>
+    <li>• Río más largo del mundo: Nilo (6,650 km)</li>
+    <li>• Desierto más grande: Sahara (9 millones km²)</li>
+    <li>• Cascada más grande: Cataratas Victoria (1,708m ancho)</li>
+    <li>• Segundo continente más grande y poblado</li>
+  </ul>
+
+  <h4>🌟 Curiosidades:</h4>
+  <ul>
+    <li>🇦🇴 <strong>Angola:</strong> Produce petróleo y diamantes. Capital: Luanda, una de las más caras del mundo.</li>
+    <li>🇩🇿 <strong>Argelia:</strong> País más grande de África. 80% desierto del Sahara.</li>
+    <li>🇧🇯 <strong>Benín:</strong> Cuna del vudú. Reino de Dahomey histórico.</li>
+    <li>🇧🇼 <strong>Botsuana:</strong> 38% del territorio son áreas protegidas. Delta del Okavango.</li>
+    <li>🇧🇫 <strong>Burkina Faso:</strong> "Tierra de hombres íntegros". Festival de cine FESPACO.</li>
+    <li>🇧🇮 <strong>Burundi:</strong> Uno de los países más pequeños de África. Café de alta calidad.</li>
+    <li>🇨🇻 <strong>Cabo Verde:</strong> 10 islas volcánicas. Música morna (Cesária Évora). País insular.</li>
+    <li>🇨🇲 <strong>Camerún:</strong> "África en miniatura" por su diversidad. Monte Camerún (4,040m).</li>
+    <li>🇹🇩 <strong>Chad:</strong> Lago Chad, uno de los más grandes de África (reducido 90% desde 1960).</li>
+    <li>🇰🇲 <strong>Comoras:</strong> Produce 80% de la vainilla mundial. País insular.</li>
+    <li>🇨🇬 <strong>Congo:</strong> Selva tropical del Congo, segunda más grande del mundo.</li>
+    <li>🇨🇩 <strong>Congo (Rep. Dem.):</strong> País más grande de África subsahariana. Rico en minerales (cobalto).</li>
+    <li>🇨🇮 <strong>Costa de Marfil:</strong> Mayor productor mundial de cacao. Capital: Yamoussoukro (Basílica más grande).</li>
+    <li>🇩🇯 <strong>Djibouti:</strong> Lago Assal, punto más bajo de África (-155m). Base militar francesa.</li>
+    <li>🇪🇬 <strong>Egipto:</strong> Pirámides de Giza (4,500 años). Canal de Suez conecta Mediterráneo y Mar Rojo.</li>
+    <li>🇪🇷 <strong>Eritrea:</strong> Independiente desde 1993 (de Etiopía). Arquitectura colonial italiana.</li>
+    <li>🇪🇹 <strong>Etiopía:</strong> Único país africano nunca colonizado. Iglesias excavadas en roca de Lalibela.</li>
+    <li>🇬🇦 <strong>Gabón:</strong> 88% cubierto de selva tropical. Parques nacionales protegidos.</li>
+    <li>🇬🇲 <strong>Gambia:</strong> País más pequeño de África continental. Rodeado por Senegal.</li>
+    <li>🇬🇭 <strong>Ghana:</strong> Primer país africano subsahariano independiente (1957). Castillos de esclavos.</li>
+    <li>🇬🇳 <strong>Guinea:</strong> Rica en bauxita (aluminio). Música tradicional (djembé).</li>
+    <li>🇬🇶 <strong>Guinea Ecuatorial:</strong> Único país hispanohablante en África subsahariana. Isla de Bioko.</li>
+    <li>🇬🇼 <strong>Guinea-Bisáu:</strong> Archipiélago de Bijagós (88 islas). Cashew (nuez de la India).</li>
+    <li>🇰🇪 <strong>Kenia:</strong> Safari Masái Mara. Cuna de corredores de maratón. Monte Kenia (5,199m).</li>
+    <li>🇱🇸 <strong>Lesoto:</strong> "Reino en el cielo". Completamente rodeado por Sudáfrica. Nieve en invierno.</li>
+    <li>🇱🇷 <strong>Liberia:</strong> Fundado por esclavos liberados de EE.UU. (1847). Única república africana no colonizada.</li>
+    <li>🇱🇾 <strong>Libia:</strong> 90% desierto del Sahara. Ruinas romanas de Leptis Magna.</li>
+    <li>🇲🇬 <strong>Madagascar:</strong> 90% de especies endémicas (lémures). 4ª isla más grande. País insular.</li>
+    <li>🇲🇼 <strong>Malaui:</strong> "Corazón cálido de África". Lago Malaui (30% del territorio).</li>
+    <li>🇲🇱 <strong>Mali:</strong> Imperio de Tombuctú. Mezquita de Barro de Djenné (Patrimonio UNESCO).</li>
+    <li>🇲🇦 <strong>Marruecos:</strong> Ciudad azul de Chefchaouen. Desierto del Sahara. Tánger y Casablanca.</li>
+    <li>🇲🇺 <strong>Mauricio:</strong> Isla paradisíaca. Hogar del dodo extinto. País insular.</li>
+    <li>🇲🇷 <strong>Mauritania:</strong> 90% desierto. Antigua ruta comercial transahariana.</li>
+    <li>🇾🇹 <strong>Mayotte:</strong> Departamento francés de ultramar. Laguna más grande del mundo.</li>
+    <li>🇲🇿 <strong>Mozambique:</strong> 2,500 km de costa. Archipiélago de Bazaruto.</li>
+    <li>🇳🇦 <strong>Namibia:</strong> Desierto del Namib (más antiguo del mundo). Dunas rojas de Sossusvlei.</li>
+    <li>🇳🇪 <strong>Níger:</strong> 80% desierto del Sahara. Reserva de jirafas más grande.</li>
+    <li>🇳🇬 <strong>Nigeria:</strong> País más poblado de África (223 millones). Nollywood (3ª industria del cine).</li>
+    <li>🇨🇫 <strong>República Centroafricana:</strong> Rica en diamantes y oro. Parque Nacional Dzanga-Sangha (gorilas).</li>
+    <li>🇷🇪 <strong>Reunión:</strong> Departamento francés. Volcán Piton de la Fournaise (muy activo).</li>
+    <li>🇷🇼 <strong>Ruanda:</strong> "Tierra de mil colinas". 61% parlamento son mujeres. Gorilas de montaña.</li>
+    <li>🇪🇭 <strong>Sahara Occidental:</strong> Territorio disputado (Marruecos vs. Frente Polisario).</li>
+    <li>🇸🇭 <strong>Santa Elena:</strong> Territorio británico. Napoleón exiliado aquí (1815-1821).</li>
+    <li>🇸🇹 <strong>Santo Tomé y Príncipe:</strong> 2 islas volcánicas. Cacao de alta calidad. País insular.</li>
+    <li>🇸🇳 <strong>Senegal:</strong> Isla de Gorée (Patrimonio UNESCO). Dakar Rally termina aquí.</li>
+    <li>🇸🇨 <strong>Seychelles:</strong> 115 islas. Coco de mer (semilla más grande). País insular más pequeño de África.</li>
+    <li>🇸🇱 <strong>Sierra Leona:</strong> Diamantes de sangre. Playas de arena blanca (Freetown).</li>
+    <li>🇸🇴 <strong>Somalia:</strong> Costa más larga de África continental (3,025 km). Incienso y mirra.</li>
+    <li>🇸🇿 <strong>Suazilandia (Eswatini):</strong> Última monarquía absoluta de África. Danza de la caña.</li>
+    <li>🇿🇦 <strong>Sudáfrica:</strong> 3 capitales. Nelson Mandela. Table Mountain. Cuna de la humanidad (fósiles).</li>
+    <li>🇸🇸 <strong>Sudán del Sur:</strong> País más joven del mundo (2011). Petróleo.</li>
+    <li>🇸🇩 <strong>Sudán:</strong> Pirámides de Meroe (más que Egipto). Desierto de Nubia.</li>
+    <li>🇹🇿 <strong>Tanzania:</strong> Kilimanjaro (5,895m). Serengueti. Zanzíbar (isla de especias).</li>
+    <li>🇮🇴 <strong>Territorio Británico del Océano Índico:</strong> Archipiélago Chagos. Base militar Diego García.</li>
+    <li>🇹🇬 <strong>Togo:</strong> País más estrecho de África (115 km ancho). Vudú tradicional.</li>
+    <li>🇹🇳 <strong>Túnez:</strong> Ruinas de Cartago. Star Wars filmado en el desierto (Tatooine).</li>
+    <li>🇺🇬 <strong>Uganda:</strong> "Perla de África". Fuente del Nilo. Gorilas de montaña.</li>
+    <li>🇿🇲 <strong>Zambia:</strong> Cataratas Victoria (lado zambiano). Safari a pie pionero.</li>
+    <li>🇿🇼 <strong>Zimbabue:</strong> Gran Zimbabue (ruinas antiguas). Cataratas Victoria ("humo que truena").</li>
+  </ul>
+}<!-- ========== Fin de Afrca ========== -->
+<!-- ========== EUROPA ========== -->
+@if (regionName === 'Europe') {
+  <h3>🇪🇺 DATOS CURIOSOS - REGIÓN DE EUROPA</h3>
+  
+  <h4>📊 Estadísticas Generales:</h4>
+  <ul>
+    <li>• 44 países soberanos</li>
+    <li>• 8 territorios con estatus especial</li>
+    <li>• Unión Europea: 27 países miembros</li>
+    <li>• Más de 200 idiomas hablados</li>
+    <li>• Población total: Más de 750 millones</li>
+    <li>• País más grande: Rusia (parte europea, 3.9 millones km²)</li>
+    <li>• País más pequeño: Ciudad del Vaticano (0.44 km²)</li>
+  </ul>
+
+  <h4>🇪🇺 Unión Europea (27 países):</h4>
+  <ul>
+    <li><strong>Fundadores (1957):</strong> Alemania, Bélgica, Francia, Italia, Luxemburgo, Países Bajos</li>
+    <li><strong>Zona Euro:</strong> 20 países usan el euro (€)</li>
+    <li><strong>Brexit:</strong> Reino Unido salió de la UE en 2020</li>
+    <li><strong>Schengen:</strong> 27 países sin fronteras internas</li>
+  </ul>
+
+  <h4>🏴 Los 8 Territorios con Estatus Especial:</h4>
+  <ul>
+    <li><strong>Dependencias de la Corona Británica (3):</strong> Guernsey, Isla de Man, Jersey</li>
+    <li><strong>Territorios Británicos (1):</strong> Gibraltar</li>
+    <li><strong>Territorios Autónomos (3):</strong> Alandia (Finlandia), Islas Faroe (Dinamarca), Svalbard (Noruega)</li>
+    <li><strong>Reconocimiento Parcial (1):</strong> Kosovo</li>
+  </ul>
+
+  <h4>🏔️ Récords Geográficos:</h4>
+  <ul>
+    <li>• Montaña más alta: Monte Elbrus, Rusia (5,642m)</li>
+    <li>• Río más largo: Volga, Rusia (3,530 km)</li>
+    <li>• País más septentrional: Noruega (Cabo Norte)</li>
+    <li>• Volcán activo más alto: Monte Etna, Italia (3,357m)</li>
+    <li>• Lago más grande: Ládoga, Rusia (17,700 km²)</li>
+  </ul>
+
+  <h4>🌟 Curiosidades:</h4>
+  <ul>
+    <li>🇦🇽 <strong>Alandia:</strong> Región autónoma de Finlandia. Idioma oficial: sueco. 6,500 islas.</li>
+    <li>🇦🇱 <strong>Albania:</strong> Bunkers comunistas (750,000). Riviera albanesa en el Adriático.</li>
+    <li>🇩🇪 <strong>Alemania:</strong> Autopistas sin límite de velocidad. Oktoberfest. Muro de Berlín cayó en 1989.</li>
+    <li>🇦🇩 <strong>Andorra:</strong> Principado en los Pirineos. Sin ejército. Paraíso fiscal y esquí.</li>
+    <li>🇦🇹 <strong>Austria:</strong> Cuna de Mozart. Palacio de Schönbrunn. Sachertorte (pastel de chocolate).</li>
+    <li>🇧🇪 <strong>Bélgica:</strong> Capital de la UE (Bruselas). Inventó las papas fritas. Más de 800 tipos de cerveza.</li>
+    <li>🇧🇾 <strong>Bielorrusia:</strong> Última dictadura de Europa. Bosques de Białowieża (bisontes europeos).</li>
+    <li>🇧🇦 <strong>Bosnia y Herzegovina:</strong> Puente de Mostar (Patrimonio UNESCO). Guerra de los Balcanes (1992-1995).</li>
+    <li>🇧🇬 <strong>Bulgaria:</strong> Cuna del alfabeto cirílico. Valle de las Rosas (aceite de rosas).</li>
+    <li>🇨🇿 <strong>Chequia:</strong> Praga, "ciudad de las 100 torres". Cerveza más barata de Europa.</li>
+    <li>🇨🇾 <strong>Chipre:</strong> Dividido (República de Chipre y Chipre del Norte). Isla de Afrodita.</li>
+    <li>🇻🇦 <strong>Ciudad del Vaticano:</strong> País más pequeño (0.44 km²). Papa. Capilla Sixtina (Miguel Ángel).</li>
+    <li>🇭🇷 <strong>Croacia:</strong> 1,244 islas. Dubrovnik (Game of Thrones). Parque Plitvice (lagos).</li>
+    <li>🇩🇰 <strong>Dinamarca:</strong> País más feliz de Europa. Legoland. Hygge (estilo de vida acogedor).</li>
+    <li>🇸🇮 <strong>Eslovenia:</strong> Lago Bled. Cuevas de Postojna. 60% bosques.</li>
+    <li>🇪🇸 <strong>España:</strong> Sagrada Familia (Gaudí). Paella. Tomatina. País más montañoso después de Suiza.</li>
+    <li>🇪🇪 <strong>Estonia:</strong> País más digital del mundo (e-gobierno). Tallín medieval.</li>
+    <li>🇫🇮 <strong>Finlandia:</strong> País más feliz del mundo (7 años). 188,000 lagos. Sauna y auroras boreales.</li>
+    <li>🇫🇷 <strong>Francia:</strong> País más visitado (90M turistas/año). Torre Eiffel. 58 sitios UNESCO.</li>
+    <li>🇬🇮 <strong>Gibraltar:</strong> Territorio británico. Peñón de Gibraltar. Único lugar europeo con monos salvajes.</li>
+    <li>🇬🇷 <strong>Grecia:</strong> Cuna de la democracia. Acrópolis. 6,000 islas (227 habitadas). Santorini.</li>
+    <li>🇬🇬 <strong>Guernsey:</strong> Dependencia de la Corona Británica. Paraíso fiscal. Canal de la Mancha.</li>
+    <li>🇭🇺 <strong>Hungría:</strong> Budapest (Parlamento más bonito). Baños termales. Goulash.</li>
+    <li>🇮🇪 <strong>Irlanda:</strong> Día de San Patricio. Guinness. Acantilados de Moher. Sin serpientes.</li>
+    <li>🇮🇲 <strong>Isla de Man:</strong> Dependencia de la Corona Británica. Carrera de motos TT. Gatos Manx (sin cola).</li>
+    <li>🇮🇸 <strong>Islandia:</strong> Sin ejército. Geiseres y glaciares. Blue Lagoon. Auroras boreales.</li>
+    <li>🇫🇴 <strong>Islas Faroe:</strong> Territorio danés. 18 islas volcánicas. Ovejas superan a personas (2:1).</li>
+    <li>🇸🇯 <strong>Islas Svalbard:</strong> Territorio noruego. Osos polares. Bóveda Global de Semillas.</li>
+    <li>🇮🇹 <strong>Italia:</strong> Más sitios UNESCO (58). Pizza, pasta. Coliseo romano. Vaticano dentro.</li>
+    <li>🇯🇪 <strong>Jersey:</strong> Dependencia de la Corona Británica. Vacas Jersey (leche famosa).</li>
+    <li>🇽🇰 <strong>Kosovo:</strong> Independencia parcialmente reconocida (2008). Monasterios ortodoxos.</li>
+    <li>🇱🇻 <strong>Letonia:</strong> Riga (Art Nouveau). Castillo de Turaida. Festival de la Canción.</li>
+    <li>🇱🇮 <strong>Liechtenstein:</strong> Principado. Sin aeropuerto. Se puede alquilar el país completo.</li>
+    <li>🇱🇹 <strong>Lituania:</strong> Colina de las Cruces (100,000 cruces). Basketball popular.</li>
+    <li>🇱🇺 <strong>Luxemburgo:</strong> PIB per cápita más alto del mundo. Multilingüe (luxemburgués, francés, alemán).</li>
+    <li>🇲🇰 <strong>Macedonia del Norte:</strong> Lago Ohrid (más antiguo de Europa). Madre Teresa nació aquí.</li>
+    <li>🇲🇹 <strong>Malta:</strong> 7,000 años de historia. Templos megalíticos. Idioma maltés (árabe + italiano).</li>
+    <li>🇲🇩 <strong>Moldavia:</strong> Región vinícola. Bodegas subterráneas más grandes (Mileștii Mici).</li>
+    <li>🇲🇨 <strong>Mónaco:</strong> Segundo país más pequeño. Casino de Montecarlo. Gran Premio de F1.</li>
+    <li>🇲🇪 <strong>Montenegro:</strong> "Montaña Negra". Bahía de Kotor. Parque Nacional Durmitor.</li>
+    <li>🇳🇴 <strong>Noruega:</strong> Fiordos. Auroras boreales. Fondo soberano más grande del mundo. Vikingos.</li>
+    <li>🇳🇱 <strong>Países Bajos:</strong> Molinos de viento. Tulipanes. 26% bajo nivel del mar. Bicicletas (más que personas).</li>
+    <li>🇵🇱 <strong>Polonia:</strong> Auschwitz. Bosque de Białowieża. Pierogi. Papa Juan Pablo II.</li>
+    <li>🇵🇹 <strong>Portugal:</strong> Navegantes (Vasco da Gama). Fado. Pastel de nata. Porto (vino).</li>
+    <li>🇬🇧 <strong>Reino Unido:</strong> Big Ben. Familia Real. Beatles. Harry Potter. Brexit (2020).</li>
+    <li>🇸🇰 <strong>República Eslovaca:</strong> Castillo de Spis. Montañas Tatras. Hockey sobre hielo.</li>
+    <li>🇷🇴 <strong>Rumania:</strong> Castillo de Drácula (Bran). Transilvania. Delta del Danubio.</li>
+    <li>🇷🇺 <strong>Rusia:</strong> País más grande del mundo. Kremlin. Transiberiano (9,289 km). Ballet Bolshói.</li>
+    <li>🇸🇲 <strong>San Marino:</strong> República más antigua del mundo (301 d.C.). Monte Titano.</li>
+    <li>🇷🇸 <strong>Serbia:</strong> Belgrado. Fortaleza de Kalemegdan. Nikola Tesla nació aquí.</li>
+    <li>🇸🇪 <strong>Suecia:</strong> IKEA. ABBA. Nobel. Archipiélago de Estocolmo (30,000 islas).</li>
+    <li>🇨🇭 <strong>Suiza:</strong> 4 idiomas oficiales. Neutral desde 1815. Chocolate y relojes. Alpes suizos.</li>
+    <li>🇺🇦 <strong>Ucrania:</strong> Kiev (ciudad más antigua de Europa Oriental). Chernóbil. Girasoles.</li>
+  </ul>
+} <!-- ========== Fin de Europa ========== -->
+<!-- ========== ASIA ========== -->
+@if (regionName === 'Asia') {
+  <h3>🌏 DATOS CURIOSOS - REGIÓN DE ASIA</h3>
+  
+  <h4>📊 Estadísticas Generales:</h4>
+  <ul>
+    <li>• 48 países soberanos</li>
+    <li>• 4 territorios con estatus especial</li>
+    <li>• Continente más grande: 44.58 millones km²</li>
+    <li>• Continente más poblado: 4,700 millones (60% población mundial)</li>
+    <li>• Más de 2,300 idiomas</li>
+    <li>• País más grande: Rusia (17.1 millones km²)</li>
+    <li>• País más pequeño: Maldivas (300 km²)</li>
+  </ul>
+
+  <h4>🏴 Los 4 Territorios con Estatus Especial:</h4>
+  <ul>
+    <li><strong>Regiones Administrativas Especiales de China (2):</strong> Hong Kong, Macao</li>
+    <li><strong>Estado con reconocimiento limitado (1):</strong> Palestina</li>
+    <li><strong>Estatus disputado (1):</strong> Taiwán</li>
+  </ul>
+
+  <h4>🏔️ Récords Geográficos:</h4>
+  <ul>
+    <li>• Montaña más alta del mundo: Monte Everest, Nepal/China (8,849m)</li>
+    <li>• Punto más bajo del mundo: Mar Muerto, Israel/Jordania (-430m)</li>
+    <li>• Lago más profundo: Baikal, Rusia (1,642m de profundidad)</li>
+    <li>• Desierto más grande de Asia: Gobi (1.3 millones km²)</li>
+    <li>• Los 10 picos más altos del mundo están en Asia (Himalaya)</li>
+    <li>• Río más largo de Asia: Yangtsé, China (6,300 km)</li>
+  </ul>
+
+  <h4>🌟 Curiosidades:</h4>
+  <ul>
+    <li>🇦🇫 <strong>Afganistán:</strong> "Cementerio de imperios". Budas de Bamiyán (destruidos 2001). Lapis lazuli.</li>
+    <li>🇸🇦 <strong>Arabia Saudí:</strong> Meca (peregrinación musulmana). Sin ríos. Petróleo (25% mundial).</li>
+    <li>🇦🇲 <strong>Armenia:</strong> Primer país cristiano (301 d.C.). Monte Ararat (Arca de Noé). Brandy armenio.</li>
+    <li>🇦🇿 <strong>Azerbaiyán:</strong> "Tierra del fuego". Yanar Dag (montaña que arde). Bakú (capital del petróleo).</li>
+    <li>🇧🇭 <strong>Bahrein:</strong> Archipiélago de 33 islas. Gran Premio de F1. Perlas naturales.</li>
+    <li>🇧🇩 <strong>Bangladesh:</strong> Sundarbans (manglar más grande). Tigres de Bengala. Rickshaws pintados.</li>
+    <li>🇧🇳 <strong>Brunei:</strong> Sultán más rico del mundo. Sin impuestos. Kampong Ayer (pueblo sobre agua).</li>
+    <li>🇧🇹 <strong>Bután:</strong> Felicidad Nacional Bruta. "Reino del Dragón del Trueno". Monasterio del Nido del Tigre.</li>
+    <li>🇰🇭 <strong>Camboya:</strong> Angkor Wat (templo más grande). Khmer Rouge. Tonlé Sap (lago).</li>
+    <li>🇶🇦 <strong>Catar:</strong> Copa Mundial 2022. País más rico per cápita. Museo Nacional impresionante.</li>
+    <li>🇨🇳 <strong>China:</strong> Gran Muralla (21,000 km). País más poblado. Pandas gigantes. TikTok y Alibaba.</li>
+    <li>🇰🇵 <strong>Corea del Norte:</strong> Régimen comunista hermético. Kim Jong-un. Sin internet libre.</li>
+    <li>🇰🇷 <strong>Corea del Sur:</strong> K-pop (BTS, Blackpink). Samsung. Internet más rápido. Kimchi.</li>
+    <li>🇦🇪 <strong>Emiratos Árabes:</strong> Burj Khalifa (828m). Islas artificiales (Palm Jumeirah). Dubái Mall.</li>
+    <li>🇵🇭 <strong>Filipinas:</strong> 7,641 islas. Único país católico de Asia. Jeepneys coloridos.</li>
+    <li>🇬🇪 <strong>Georgia:</strong> Cuna del vino (8,000 años). Alfabeto único. Khachapuri (pan con queso).</li>
+    <li>🇭🇰 <strong>Hong Kong:</strong> RAE de China. Skyline más denso. 263 islas. Dim sum.</li>
+    <li>🇮🇳 <strong>India:</strong> Taj Mahal. Bollywood. 22 idiomas oficiales. Yoga y curry. Cricket.</li>
+    <li>🇮🇩 <strong>Indonesia:</strong> 17,000 islas. Mayor país musulmán. Komodo dragons. Bali (turismo).</li>
+    <li>🇮🇶 <strong>Irak:</strong> Cuna de la civilización (Mesopotamia). Babilonia. Zigurat de Ur.</li>
+    <li>🇮🇷 <strong>Irán:</strong> Antigua Persia. Persépolis. Alfombras persas. Caviar del Caspio.</li>
+    <li>🇮🇱 <strong>Israel:</strong> Tierra Santa. Jerusalén (3 religiones). Mar Muerto. Start-up Nation.</li>
+    <li>🇯🇵 <strong>Japón:</strong> 6,852 islas. Sushi. Monte Fuji. Anime y manga. Bullet trains (Shinkansen).</li>
+    <li>🇯🇴 <strong>Jordania:</strong> Petra (ciudad rosa). Mar Muerto. Wadi Rum (Marte en la Tierra).</li>
+    <li>🇰🇿 <strong>Kazajistán:</strong> País más grande sin salida al mar. Cosmódromo de Baikonur. Estepas infinitas.</li>
+    <li>🇰🇬 <strong>Kirguizistán:</strong> 90% montañas. Yurtas nómadas. Lago Issyk-Kul (nunca se congela).</li>
+    <li>🇰🇼 <strong>Kuwait:</strong> Torres de Kuwait. 10% de reservas petroleras mundiales. Desierto.</li>
+    <li>🇱🇦 <strong>Laos:</strong> Único país sin costa de Asia del Sudeste. Luang Prabang. Budismo Theravada.</li>
+    <li>🇱🇧 <strong>Líbano:</strong> "Suiza de Oriente Medio". Cedros milenarios. Biblos (ciudad más antigua).</li>
+    <li>🇲🇴 <strong>Macao:</strong> RAE de China. "Las Vegas de Asia". Casinos. Fusión portuguesa-china.</li>
+    <li>🇲🇾 <strong>Malasia:</strong> Torres Petronas. Orangutanes. Isla de Borneo compartida. Nasi lemak.</li>
+    <li>🇲🇻 <strong>Maldivas:</strong> 1,192 islas coralinas. País más plano (2.4m altura máxima). Paraíso submarino.</li>
+    <li>🇲🇳 <strong>Mongolia:</strong> Genghis Khan. Yurtas. Desierto de Gobi. Caballos salvajes (Przewalski).</li>
+    <li>🇲🇲 <strong>Myanmar:</strong> Templos de Bagan (2,000+). Pagoda Shwedagon (oro). Lago Inle.</li>
+    <li>🇳🇵 <strong>Nepal:</strong> Everest (8,849m). Única bandera no rectangular. Buda nació aquí. Sherpas.</li>
+    <li>🇴🇲 <strong>Omán:</strong> Sultanato. Desierto, montañas y playas. Franjas (incienso). Fuerte de Nizwa.</li>
+    <li>🇵🇰 <strong>Pakistán:</strong> K2 (8,611m). Valle de Hunza. Carretera del Karakórum (más alta del mundo).</li>
+    <li>🇵🇸 <strong>Palestina:</strong> Cisjordania y Gaza. Belén (Jesús nació). Conflicto israelí-palestino.</li>
+    <li>🇸🇬 <strong>Singapur:</strong> Ciudad-estado. Sin chicle. Marina Bay Sands. Gardens by the Bay. Multa por todo.</li>
+    <li>🇸🇾 <strong>Siria:</strong> Damasco (capital más antigua habitada). Palmira. Guerra civil (2011).</li>
+    <li>🇱🇰 <strong>Sri Lanka:</strong> "Lágrima de India". Té de Ceilán. Elefantes. Sigiriya (roca del león).</li>
+    <li>🇹🇭 <strong>Tailandia:</strong> "Tierra de sonrisas". Templos dorados. Pad Thai. Islas Phi Phi. Elefantes.</li>
+    <li>🇹🇼 <strong>Taiwán:</strong> Tecnología (TSMC). Taipei 101. Night markets. Té de burbujas (bubble tea).</li>
+    <li>🇹🇯 <strong>Tayikistán:</strong> 93% montañas. Pamir Highway. Lago Iskanderkul.</li>
+    <li>🇹🇱 <strong>Timor Oriental:</strong> País más joven de Asia (2002). Café orgánico. Ataúro (buceo).</li>
+    <li>🇹🇲 <strong>Turkmenistán:</strong> "Puerta del Infierno" (cráter ardiendo). Estatuas doradas del presidente. Gas natural.</li>
+    <li>🇹🇷 <strong>Turquía:</strong> Puente Europa-Asia. Capadocia (globos). Santa Sofía. Kebab y baklava.</li>
+    <li>🇺🇿 <strong>Uzbekistán:</strong> Ruta de la Seda. Samarcanda (Registán). Mezquitas de azulejos azules.</li>
+    <li>🇻🇳 <strong>Vietnam:</strong> Bahía de Ha Long. Guerra de Vietnam. Pho (sopa). Túneles de Cu Chi.</li>
+    <li>🇾🇪 <strong>Yemen:</strong> Socotra (isla alienígena). Antigua Arabia Felix. Café yemení (Mokha).</li>
+  </ul>
+}<!-- ========== Fin de Asia ========== -->
+<!-- ========== OCEANÍA ========== -->
+@if (regionName === 'Oceania') {
+  <h3>🌏 DATOS CURIOSOS - REGIÓN DE OCEANÍA</h3>
+  
+  <h4>📊 Estadísticas Generales:</h4>
+  <ul>
+    <li>• 14 países soberanos</li>
+    <li>• 13 territorios no soberanos</li>
+    <li>• Más de 10,000 islas</li>
+    <li>• Continente más pequeño: 8.5 millones km²</li>
+    <li>• Población total: Más de 45 millones</li>
+    <li>• País más grande: Australia (7.69 millones km²)</li>
+    <li>• País más pequeño: Nauru (21 km²)</li>
+  </ul>
+
+  <h4>🏝️ Subdivisiones de Oceanía:</h4>
+  <ul>
+    <li><strong>Australasia:</strong> Australia, Nueva Zelanda, Nueva Guinea</li>
+    <li><strong>Melanesia:</strong> Fiyi, Papúa Nueva Guinea, Islas Salomón, Vanuatu</li>
+    <li><strong>Micronesia:</strong> Islas Marshall, Estados Federados de Micronesia, Nauru, Palaos, Kiribati</li>
+    <li><strong>Polinesia:</strong> Samoa, Tonga, Tuvalu</li>
+  </ul>
+
+  <h4>🏴 Los 13 Territorios No Soberanos:</h4>
+  <ul>
+    <li><strong>Territorios Estadounidenses (3):</strong> Guam, Islas Marianas del Norte, Samoa Americana</li>
+    <li><strong>Territorios Franceses (3):</strong> Nueva Caledonia, Polinesia Francesa, Wallis y Futuna</li>
+    <li><strong>Territorios Australianos (3):</strong> Isla de Navidad, Isla de Norfolk, Islas Cocos</li>
+    <li><strong>Territorios de Nueva Zelanda (3):</strong> Islas Cook, Niue, Tokelau</li>
+    <li><strong>Territorio Británico (1):</strong> Islas Pitcairn</li>
+  </ul>
+
+  <h4>🏔️ Récords Geográficos:</h4>
+  <ul>
+    <li>• Arrecife más grande del mundo: Gran Barrera de Coral, Australia (2,300 km)</li>
+    <li>• Montaña más alta: Puncak Jaya, Indonesia (4,884m)</li>
+    <li>• Isla más grande: Nueva Guinea (785,753 km²)</li>
+    <li>• Punto más bajo: Lago Eyre, Australia (-15m)</li>
+    <li>• Roca más grande del mundo: Monte Augusto, Australia (8 km)</li>
+  </ul>
+
+  <h4>🌟 Curiosidades:</h4>
+  <ul>
+    <li>🇦🇺 <strong>Australia:</strong> Canguros, koalas. Gran Barrera de Coral. Uluru (Ayers Rock). 21 de 25 serpientes más venenosas.</li>
+    <li>🇫🇯 <strong>Fiyi:</strong> 333 islas. "Bula!" (hola). Rugby. Fire walking (caminar sobre fuego).</li>
+    <li>🇬🇺 <strong>Guam:</strong> Territorio de EE.UU. Base militar. Chamorro culture. Two Lovers Point.</li>
+    <li>🇨🇽 <strong>Isla de Navidad:</strong> Territorio australiano. Migración de cangrejos rojos (40 millones). Detención de refugiados.</li>
+    <li>🇳🇫 <strong>Isla de Norfolk:</strong> Territorio australiano. Pinos de Norfolk. Bounty mutineers descendants.</li>
+    <li>🇨🇨 <strong>Islas Cocos:</strong> Territorio australiano. 27 islas coralinas. Paraíso para snorkel.</li>
+    <li>🇨🇰 <strong>Islas Cook:</strong> Estado libre asociado con NZ. 15 islas. Rarotonga. Laguna Aitutaki.</li>
+    <li>🇲🇵 <strong>Islas Marianas del Norte:</strong> Territorio de EE.UU. Saipan. Gruta azul. WWII history.</li>
+    <li>🇲🇭 <strong>Islas Marshall:</strong> 29 atolones. Bikini Atoll (pruebas nucleares). Majuro capital.</li>
+    <li>🇵🇳 <strong>Islas Pitcairn:</strong> Territorio británico. 35 habitantes. Descendientes del motín del Bounty.</li>
+    <li>🇸🇧 <strong>Islas Salomón:</strong> 900 islas. WWII battlefields. Guadalcanal. Skull Island.</li>
+    <li>🇹🇰 <strong>Islas Tokelau:</strong> Territorio de NZ. 3 atolones. Sin aeropuerto. Internet satelital.</li>
+    <li>🇰🇮 <strong>Kiribati:</strong> 33 atolones. Único país en 4 hemisferios. Línea de cambio de fecha.</li>
+    <li>🇫🇲 <strong>Micronesia:</strong> 607 islas. Ruinas de Nan Madol. Buceo en wrecks WWII.</li>
+    <li>🇳🇷 <strong>Nauru:</strong> 21 km². Sin capital oficial. Minería de fosfatos agotada. Obesidad alta.</li>
+    <li>🇳🇺 <strong>Niue:</strong> Estado libre asociado con NZ. "Roca de Polinesia". Monedas coleccionables.</li>
+    <li>🇳🇨 <strong>Nueva Caledonia:</strong> Colectividad francesa. Níquel. Laguna más grande del mundo. Kanak culture.</li>
+    <li>🇳🇿 <strong>Nueva Zelanda:</strong> Señor de los Anillos. Kiwis. All Blacks (rugby). Sin serpientes. Maoríes.</li>
+    <li>🇵🇼 <strong>Palaos:</strong> 340 islas. Rock Islands. Jellyfish Lake. Prohibido protector solar (desde 2020).</li>
+    <li>🇵🇬 <strong>Papúa Nueva Guinea:</strong> 800+ idiomas. Tribus aisladas. Kokoda Track. Birds of paradise.</li>
+    <li>🇵🇫 <strong>Polinesia Francesa:</strong> Colectividad francesa. Tahití, Bora Bora. Moai de Rapa Nui. Perlas negras.</li>
+    <li>🇼🇸 <strong>Samoa:</strong> "Cuna de la Polinesia". Fa'a Samoa (tradiciones). Robert Louis Stevenson vivió aquí.</li>
+    <li>🇦🇸 <strong>Samoa Americana:</strong> Territorio de EE.UU. Pago Pago. Parque Nacional. Fútbol americano.</li>
+    <li>🇹🇴 <strong>Tonga:</strong> Único reino del Pacífico. Nunca colonizado. Ballenas jorobadas. Ha'amonga trilithon.</li>
+    <li>🇹🇻 <strong>Tuvalu:</strong> 4º país más pequeño. 9 atolones. Hundimiento por cambio climático. Dominio .tv.</li>
+    <li>🇻🇺 <strong>Vanuatu:</strong> 83 islas. Volcán Yasur activo. Bungee jumping original (land diving).</li>
+    <li>🇼🇫 <strong>Wallis y Futuna:</strong> Colectividad francesa. 3 islas principales. Sin aeropuerto internacional. Iglesias católicas.</li>
+  </ul>
+}<!-- ========== Fin de Oceana ========== -->
+<!-- ========== ANTÁRTIDA ========== -->
+@if (regionName === 'Antarctic') {
+  <h3>❄️ DATOS CURIOSOS - ANTÁRTIDA</h3>
+  
+  <h4>📊 Estadísticas Generales:</h4>
+  <ul>
+    <li>• 0 países soberanos (gobernado por Tratado Antártico)</li>
+    <li>• 5 territorios reclamados</li>
+    <li>• Continente más frío, seco y ventoso</li>
+    <li>• Superficie: 14 millones km² (5º continente más grande)</li>
+    <li>• Población: 1,000-4,000 (científicos temporales)</li>
+    <li>• 98% cubierto de hielo</li>
+    <li>• Sin habitantes permanentes</li>
+  </ul>
+
+  <h4>🏴 Los 5 Territorios y Zonas Reclamadas:</h4>
+  <ul>
+    <li><strong>Territorios Noruegos (1):</strong> Isla Bouvet (deshabitada)</li>
+    <li><strong>Territorios Británicos (1):</strong> Islas Georgias del Sur y Sandwich del Sur (reclamado también por Argentina)</li>
+    <li><strong>Territorios Australianos (1):</strong> Islas Heard y McDonald</li>
+    <li><strong>Territorios Franceses (1):</strong> Tierras Australes y Antárticas Francesas</li>
+    <li><strong>Zona Antártica:</strong> 7 países reclaman sectores (Argentina, Australia, Chile, Francia, Noruega, Nueva Zelanda, Reino Unido)</li>
+  </ul>
+
+  <h4>❄️ Récords Geográficos:</h4>
+  <ul>
+    <li>• Temperatura más baja registrada: -89.2°C (Estación Vostok, 1983)</li>
+    <li>• Montaña más alta: Monte Vinson (4,892m)</li>
+    <li>• Capa de hielo más gruesa: 4,776m</li>
+    <li>• Contiene 70% del agua dulce mundial</li>
+    <li>• Vientos más fuertes: hasta 320 km/h</li>
+    <li>• Desierto más grande del mundo (por precipitaciones)</li>
+  </ul>
+
+  <h4>🌟 Curiosidades:</h4>
+  <ul>
+    <li>🇦🇶 <strong>Antártida:</strong> Tratado Antártico (1959) prohíbe militarización. 54 países firmantes. Más de 80 bases científicas.</li>
+    <li>🇧🇻 <strong>Isla Bouvet:</strong> Territorio noruego. Isla más remota del mundo (1,600 km de tierra habitada). Volcánica. Completamente deshabitada.</li>
+    <li>🇬🇸 <strong>Islas Georgias del Sur:</strong> Territorio británico. Reclamado por Argentina. Tumba de Ernest Shackleton. 2 millones de focas peleteras.</li>
+    <li>🇭🇲 <strong>Islas Heard y McDonald:</strong> Territorio australiano. Volcán Big Ben activo (2,745m). Patrimonio Mundial UNESCO. Sin habitantes.</li>
+    <li>🇹🇫 <strong>Tierras Australes Francesas:</strong> Colectividad francesa. 5 distritos. Pingüinos rey. Base científica Port-aux-Français.</li>
+  </ul>
+
+  <h4>🐧 Datos Adicionales de la Antártida:</h4>
+  <ul>
+    <li>• <strong>Pingüinos:</strong> Hogar de millones (Emperador, Adelia, Barbijo, Macaroni)</li>
+    <li>• <strong>Sol de medianoche:</strong> 6 meses de luz continua, 6 meses de oscuridad</li>
+    <li>• <strong>Sin zona horaria:</strong> Las bases usan la zona horaria de su país de origen</li>
+    <li>• <strong>Sin árboles ni reptiles:</strong> Clima demasiado extremo para vida vegetal compleja</li>
+    <li>• <strong>Glaciares:</strong> Si todo el hielo se derritiera, el nivel del mar subiría 60 metros</li>
+    <li>• <strong>Meteoritos:</strong> Mejor lugar para encontrarlos (contraste con hielo blanco)</li>
+    <li>• <strong>Maratón:</strong> Antarctic Ice Marathon, la carrera más extrema del mundo</li>
+    <li>• <strong>Sin aeropuertos comerciales:</strong> Solo pistas para aviones científicos y militares</li>
+    <li>• <strong>Krill antártico:</strong> Especie clave del ecosistema (ballenas, focas, pingüinos)</li>
+    <li>• <strong>Agujero de ozono:</strong> Descubierto sobre la Antártida en 1985</li>
+    <li>• <strong>Lago Vostok:</strong> Lago subglacial a 4 km bajo el hielo, aislado 15 millones de años</li>
+    <li>• <strong>Blood Falls:</strong> Cascada de hierro oxidado rojo que brota del glaciar Taylor</li>
+  </ul>
+}<!-- ========== Fin de Antártida ========== -->
+      </div>
+    </aside>
+
+   <!-- Sección central: Lista de países con buscador -->
+    <section class="countries-center">
+      
+      <!-- Caja de búsqueda con contador de países -->
+      <div class="search-section">
+        <p class="total-countries">{{ filteredCountries.length }} países en total</p>
+        
+        <div class="search-wrapper">
+          <!-- Input de búsqueda con ngModel (two-way binding) -->
+          <input 
+            type="text" 
+            [(ngModel)]="searchTerm"
+            (input)="onSearch()"
+            placeholder="🔍 Buscar país por nombre..."
+            class="search-input">
+          
+          <!-- Botón para ir al índice alfabético -->
+          <button class="btn-indice" (click)="scrollToLetter('A')">Índice</button>
+        </div>
+      </div>
+
+      <!-- Lista de países con scroll -->
+      <div class="countries-list">
+        <!-- Mensaje de carga -->
+        @if (loading) {
+          <div class="loading">Cargando países...</div>
+        }
+
+        <!-- Lista de países agrupados alfabéticamente -->
+        @if (!loading) {
+          @for (letter of getAlphabetLetters(); track letter) {
+            @if (getCountriesByLetter(letter).length > 0) {
+              <!-- Separador alfabético con data-letter para el scroll -->
+              <div class="separator" [attr.data-letter]="letter" [id]="'letter-' + letter">
+                ────────────────── {{ letter }} ──────────────────
+              </div>
+              
+              <!-- Tarjetas de países que empiezan con esta letra -->
+              @for (country of getCountriesByLetter(letter); track country.code) {
+                <div class="country-card">
+                  <!-- Bandera del país con manejo de errores -->
+                  <img 
+                    [src]="country.flagUrl" 
+                    [alt]="country.name"
+                    class="flag"
+                    (error)="onImageError($event)">
+                  
+                  <!-- Nombre del país -->
+                  <h3 class="country-name">{{ country.name }}</h3>
+                  
+                  <!-- Información: capital y población formateada -->
+                  <p class="country-details">
+                    {{ country.capital }} • {{ formatNumber(country.population) }} habitantes
+                  </p>
+                  
+                  <!-- Botón para ir al detalle del país -->
+                  <button 
+                    class="btn-view"
+                    (click)="goToCountryDetail(country.code)">
+                    Ver →
+                  </button>
+                </div>
+              }
+            }
+          }
+        }
+
+        <!-- Mensaje cuando no hay resultados -->
+        @if (!loading && filteredCountries.length === 0) {
+          <div class="no-results">
+            <p>😔 No se encontraron países</p>
+            <button class="btn-clear" (click)="searchTerm = ''; onSearch()">
+              Limpiar búsqueda
+            </button>
+          </div>
+        }
+      </div>
+    </section>
+
+    <!-- Sidebar derecha: Índice alfabético vertical -->
+    <aside class="sidebar-right">
+      <div class="alphabet-index">
+        <div class="index-title">
+          <div class="index-circle"></div>
+          <span>Índice</span>
+        </div>
+        <p class="index-instruction">Oprime la letra por la que empieza el nombre del país.</p>
+        
+        <!-- Botones alfabéticos en columna -->
+        <div class="alphabet-letters">
+          @for (letter of alphabet; track letter) {
+            <button 
+              class="letter-btn"
+              (click)="scrollToLetter(letter)"
+              [class.active]="currentLetter === letter"
+              [class.disabled]="!hasCountriesForLetter(letter)"
+              [disabled]="!hasCountriesForLetter(letter)">
+              {{ letter }}
+            </button>
+          }
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>

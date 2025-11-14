@@ -1,0 +1,245 @@
+/* Contenedor principal con fondo degradado cónico */
+.home-container {
+  min-height: 100vh;
+  background: conic-gradient(
+    from -83.19deg at 31.81% 50%,
+    #000d7f 0deg,
+    #004d58 0.04deg,
+    #005255 38.66deg,
+    #005454 75.05deg,
+    #005653 90deg,
+    #003964 103.42deg,
+    #002e6a 108.65deg,
+    #00b31b 169.62deg,
+    #00ab20 175.67deg,
+    #00992b 188.06deg,
+    #008934 199.04deg,
+    #003865 233.62deg,
+    #00654a 360deg
+  );
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: 'Anonymous Pro', monospace;
+  position: relative;
+  overflow: hidden; // Oculta los planetas que se salen de la pantalla
+}
+
+/* Encabezado negro con título */
+.header {
+  background: #000;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: 0.5em; // Espaciado entre letras
+  color: #fff;
+  margin: 0;
+}
+
+/* Estilo base para todos los planetas decorativos */
+.planeta {
+  position: absolute;
+  opacity: 0.6;
+  z-index: 1; // Detrás del contenido
+  pointer-events: none; // No interfiere con clicks
+  filter: drop-shadow(0 0 30px rgba(0, 255, 100, 0.4)); // Sombra luminosa
+}
+
+/* Planetas del lado izquierdo con diferentes tamaños y posiciones */
+.planeta-1 {
+  width: 350px;
+  height: auto;
+  top: 120px;
+  left: -20px;
+  animation: girarPlaneta 60s linear infinite; // Gira continuamente
+}
+
+.planeta-2 {
+  width: 320px;
+  height: auto;
+  top: 45%;
+  left: -60px;
+  opacity: 0.7;
+  animation: girarPlaneta 80s linear infinite reverse; // Gira al revés
+}
+
+.planeta-3 {
+  width: 320px;
+  height: auto;
+  bottom: 100px;
+  left: -10px;
+  opacity: 10;
+  animation: girarPlaneta 70s linear infinite;
+}
+
+/* Planetas del lado derecho con diferentes colores de sombra */
+.planeta-4 {
+  width: 380px;
+  height: auto;
+  top: 150px;
+  right: -40px;
+  animation: girarPlaneta 90s linear infinite reverse;
+  filter: drop-shadow(0 0 30px rgba(0, 100, 255, 0.4)); // Sombra azul
+}
+
+.planeta-5 {
+  width: 300px;
+  height: auto;
+  top: 50%;
+  right: -60px;
+  opacity: 0.7;
+  animation: girarPlaneta 75s linear infinite;
+  filter: drop-shadow(0 0 30px rgba(100, 255, 0, 0.4)); // Sombra verde
+}
+
+.planeta-6 {
+  width: 340px;
+  height: auto;
+  bottom: 80px;
+  right: -90px;
+  opacity: 0.9;
+  animation: girarPlaneta 85s linear infinite reverse;
+  filter: drop-shadow(0 0 30px rgba(255, 0, 100, 0.4)); // Sombra rosa
+}
+
+/* Animación de rotación de 360 grados */
+@keyframes girarPlaneta {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Sección donde están las tarjetas de continentes */
+.continents-section {
+  padding: 60px 20px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5; // Por encima de los planetas
+}
+
+.continents-section h2 {
+  text-align: center;
+  font-size: 92px;
+  margin-bottom: 40px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* Contenedor de tarjetas en columna */
+.continents-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; // Espacio entre tarjetas
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Tarjeta individual de continente con gradiente */
+.continent-card {
+  background: linear-gradient(90deg, #00b31b 0%, #000d7f 100%);
+  border-radius: 50px;
+  padding: 25px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease; // Transición suave
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Efecto hover: levanta y agranda la tarjeta */
+.continent-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 179, 27, 0.6); // Sombra verde más intensa
+}
+
+/* Nombre del continente con efecto de texto degradado */
+.continent-name {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  background: linear-gradient(150deg, #ffffff 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; // Hace el texto transparente para ver el gradiente
+  margin: 0;
+  letter-spacing: 0;
+}
+
+/* Descripción con dato curioso */
+.continent-description {
+  display: block;
+  font-size: 20px;
+  color: #f0f0f0;
+  font-weight: 300;
+  max-width: 90%;
+  margin: 0 auto;
+  line-height: 1.4em;
+}
+
+/* Pie de página con fondo semitransparente */
+.footer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 10;
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 1200px) {
+  .planeta-1 { width: 280px; left: -60px; }
+  .planeta-2 { width: 220px; left: -50px; }
+  .planeta-3 { width: 250px; left: -55px; }
+  .planeta-4 { width: 300px; right: -70px; }
+  .planeta-5 { width: 240px; right: -60px; }
+  .planeta-6 { width: 270px; right: -65px; }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+  }
+
+  .continents-section h2 {
+    font-size: 3rem;
+  }
+
+  .continent-name {
+    font-size: 2rem;
+  }
+
+  .continent-description {
+    font-size: 1rem;
+  }
+
+  .planeta {
+    opacity: 0.9;
+  }
+
+  // Reposiciona planetas para móvil
+  .planeta-1 { width: 180px; left: -70px; top: 100px; }
+  .planeta-2 { width: 140px; left: -50px; }
+  .planeta-3 { width: 160px; left: -60px; bottom: 150px; }
+  .planeta-4 { width: 200px; right: -80px; top: 120px; }
+  .planeta-5 { width: 150px; right: -60px; }
+  .planeta-6 { width: 170px; right: -70px; bottom: 200px; }
+}

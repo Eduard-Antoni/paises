@@ -1,0 +1,74 @@
+<div class="home-container">
+  <!-- Encabezado con título principal -->
+  <header class="header">
+    <h1 class="title">EXPLORA EL PLANETA TIERRA</h1>
+  </header>
+
+  <!-- Imágenes decorativas de planetas en el lado izquierdo -->
+  <img src="assets/MUNDO-1.png" alt="Tierra 1" class="planeta planeta-1" />
+  <img src="assets/MUNDO-2.png" alt="Tierra 2" class="planeta planeta-2" />
+  <img src="assets/MUNDO-1.png" alt="Tierra 3" class="planeta planeta-3" />
+
+  <!-- Imágenes decorativas de planetas en el lado derecho -->
+  <img src="assets/MUNDO-2.png" alt="Tierra 4" class="planeta planeta-4" />
+  <img src="assets/MUNDO-1.png" alt="Tierra 5" class="planeta planeta-5" />
+  <img src="assets/MUNDO-2.png" alt="Tierra 6" class="planeta planeta-6" />
+
+  <!-- Sección principal con las tarjetas de continentes -->
+  <section class="continents-section">
+    <h2>CONTINENTES</h2>
+
+    <div class="continents-grid">
+      <!-- Tarjeta de América: al hacer click navega a la lista de países -->
+      <div class="continent-card" (click)="goToRegion('Americas')">
+        <h3 class="continent-name">América</h3>
+        <p class="continent-description">
+           🗽 América — 35 países. Dato curioso: Es el único continente que se extiende de polo a polo, desde el Ártico hasta la Antártida.
+        </p>
+      </div>
+
+      <!-- Tarjeta de África -->
+      <div class="continent-card" (click)="goToRegion('Africa')">
+        <h3 class="continent-name">África</h3>
+        <p class="continent-description">
+           🏜️ África — 54 países. Dato curioso: Es el continente con más diversidad cultural y lingüística del mundo: ¡se hablan más de 2,000 idiomas distintos!
+        </p>
+      </div>
+
+      <!-- Tarjeta de Antártida -->
+      <div class="continent-card" (click)="goToRegion('Antarctic')">
+        <h3 class="continent-name">Antártida</h3>
+        <p class="continent-description">
+          ❄️ Antártida — 0 países. Dato curioso: No pertenece a ningún país; está protegida por el Tratado Antártico. ¡Temperaturas de hasta −89 °C!
+        </p>
+      </div>
+
+      <!-- Tarjeta de Asia -->
+      <div class="continent-card" (click)="goToRegion('Asia')">
+        <h3 class="continent-name">Asia</h3>
+        <p class="continent-description">
+           🗻 Asia — 49 países. Dato curioso: Es el continente más poblado: más de 4,600 millones de personas, casi el 60% de la población mundial.
+        </p>
+      </div>
+
+      <!-- Tarjeta de Europa -->
+      <div class="continent-card" (click)="goToRegion('Europe')">
+        <h3 class="continent-name">Europa</h3>
+        <p class="continent-description">
+          🔱 Europa — 44 países. Dato curioso: Es el continente con más países pequeños, incluyendo Mónaco, San Marino y Vaticano.
+        </p>
+      </div>
+
+      <!-- Tarjeta de Oceanía -->
+      <div class="continent-card" (click)="goToRegion('Oceania')">
+        <h3 class="continent-name">Oceanía</h3>
+        <p class="continent-description">
+          🏝️ Oceanía — 14 países. Dato curioso: La mayoría son islas diminutas dispersas en el océano Pacífico. Aquí vive el ornitorrinco.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="footer"> 🗺️ Explora cualquier país del mundo • Datos actualizados 2025</footer>
+</div>

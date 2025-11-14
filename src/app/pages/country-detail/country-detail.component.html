@@ -1,0 +1,41 @@
+<!-- Pantalla de carga mientras obtiene los datos -->
+@if (loading) {
+  <div class="loading-screen">
+    <p>Cargando información del país...</p>
+  </div>
+}
+
+<!-- Muestra el detalle del país si existe -->
+@if (!loading && country) {
+  <div class="detalle-pais">
+    <div class="contenedor-info">
+      <!-- Nombre del país como título -->
+      <h2 class="titulo">{{ country.name }}</h2>
+      
+      <!-- Bandera del país con manejo de errores -->
+      <img [src]="country.flagUrl" [alt]="country.name" class="bandera" (error)="onImageError($event)" />
+
+      <!-- Lista de datos del país en tarjetas -->
+      <div class="datos">
+        <div class="tarjeta">🏛️ <strong>Capital:</strong> {{ country.capital }}</div>
+        <div class="tarjeta">🌎 <strong>Región:</strong> {{ country.region }}</div>
+        <div class="tarjeta">📏 <strong>Área:</strong> {{ formatNumber(country.area) }} km²</div>
+        <div class="tarjeta">👥 <strong>Población:</strong> {{ formatNumber(country.population) }} habitantes</div>
+        <div class="tarjeta">🗣️ <strong>Idiomas:</strong> {{ country.languages }}</div>
+        <div class="tarjeta">💰 <strong>Moneda:</strong> {{ country.currency }}</div>
+        <div class="tarjeta">⏰ <strong>Zona Horaria:</strong> {{ country.timezone }}</div>
+      </div>
+
+      <!-- Botón para regresar a la lista de países -->
+      <button class="volver" (click)="goBack()">← Volver</button>
+    </div>
+  </div>
+}
+
+<!-- Mensaje de error si no se encuentra el país -->
+@if (!loading && !country) {
+  <div class="error-screen">
+    <p>😕 No se encontró información del país</p>
+    <button class="volver" (click)="goBack()">← Volver</button>
+  </div>
+}
